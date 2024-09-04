@@ -1,0 +1,68 @@
+.login-screen{
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../public/img/bg-login.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-screen form{
+    max-width: 500px;
+    max-height: 800px;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.login-screen form .logo{
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../public/img/logo.png");
+    background-size: cover;
+}
+
+.login-screen form h2{
+    color: white;
+    font-size: 27px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.login-screen form h2 span{
+    font-weight: 700;
+}
+
+.login-screen form input{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 17px;
+    border: 1px solid #c7c7c7;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 0px 10px;
+    outline: 0;
+}
+
+.login-screen form button{
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 1s;
+    border: 3px solid #9457eb;
+}
+
+.login-screen form button:nth-of-type(2){
+    border: 3px solid #00b0fc;
+}

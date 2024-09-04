@@ -1,0 +1,8 @@
+.info-cliente{
+    display: flex;
+    flex-direction: row;
+}
+
+.info-cliente .cont-esquerda, .info-cliente .cont-direita{
+    padding: 20px;
+}
