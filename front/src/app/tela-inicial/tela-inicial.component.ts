@@ -10,5 +10,12 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './tela-inicial.component.css'
 })
 export class TelaInicialComponent {
-
+  exibir_saldo(){
+    const boxContainer = document.querySelector('#exibir_saldo') as HTMLElement;
+    boxContainer.classList.toggle("reveal");
+  }
+  exibir_cartao(){
+    const boxContainer = document.querySelector('#exibir_cartao') as HTMLElement;
+    boxContainer.classList.toggle("reveal");
+  }
 }
