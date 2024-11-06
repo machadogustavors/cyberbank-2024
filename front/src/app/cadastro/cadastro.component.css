@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    /* border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+    max-width: 500px;
+    margin: auto;
+    /* border: 2px solid #c7c7c7; */
+}
+
+h2 {
+    color: #9457eb;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #9457eb;
+}
+
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #c7c7c7;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #00b0fc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 176, 252, 0.5);
+}
+
+input[type="submit"] {
+    background-color: #9457eb;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #00b0fc;
+}
+
+input[type="submit"]:active {
+    background-color: #9457eb;
+    transform: scale(0.98);
+}

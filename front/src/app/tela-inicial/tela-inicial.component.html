@@ -14,7 +14,10 @@
 
 <div class="servicos">
     <div class="box-container" id="exibir_saldo">
-        <div id="curtain" class="curtain" (click)="exibir_saldo()"></div>
+        
+        <div id="curtain" class="curtain" (click)="exibir_saldo()">
+            <p *ngIf="showText" class="text-curtain">Saldo da conta</p>
+        </div>
         <div class="content">
             <div class="left-content">
                 <h2 class="superior-title">Conta corrente</h2>
@@ -22,57 +25,40 @@
                 <h1 class="main-info">R$ 190,12</h1>
                 <p class="inferior-text">(Disponível em conta)</p>
             </div>
-            <div class="right-content">
-                <a class="logo-servico"></a>
-                <p class="desc-servco">Extrato</p>
+            <div (click)="abrirExtrato()" class="right-content">
+                <p class="desc-servico">Extrato</p>
+                <div class="logo-servico"></div>
             </div>
         </div>
     </div>
+    
     <div class="box-container" id="exibir_cartao">
-        <div id="curtain" class="curtain" (click)="exibir_cartao()"></div>
+        <div id="curtain" class="curtain" (click)="exibir_cartao()">
+            <p *ngIf="showTextCartao" class="text-curtain">Cartão de crédito</p>
+        </div>
         <div class="content">
             <div class="left-content">
                 <h2 class="superior-title">Cartão de crédito</h2>
-                <p class="superior-text">Saldo atual</p>
-                <h1 class="main-info">R$ 190,12</h1>
-                <p class="inferior-text">(Disponível em conta)</p>
+                <p class="superior-text">Limite disponível</p>
+                <h1 class="main-info">R$ 5853,22</h1>
+                <p class="inferior-text">(Disponível para uso)</p>
             </div>
             <div class="right-content">
-                <a class="logo-servico"></a>
-                <p class="desc-servco">Extrato</p>
+                <p class="desc-servico">Cartões</p>
+                <div class="logo-servico-cartao"></div>
             </div>
         </div>
     </div>
-    <div class="box-container">
-        <div id="curtain" class="curtain" (click)="exibir()"></div>
-        <div class="content">
-            <div class="left-content">
-                <h2 class="superior-title">Conta corrente</h2>
-                <p class="superior-text">Saldo atual</p>
-                <h1 class="main-info">R$ 190,12</h1>
-                <p class="inferior-text">(Disponível em conta)</p>
-            </div>
-            <div class="right-content">
-                <a class="logo-servico"></a>
-                <p class="desc-servco">Extrato</p>
-            </div>
+    
+    
+
+    <!--seção de ações-->
+    <section class="actions">
+        <div class="default-action pix-action">
+            <p>Fazer um pix</p>
+            <div class="pix-image" (click)="fazer_pix()"></div>
         </div>
-    </div>
-    <div class="box-container">
-        <div id="curtain" class="curtain" (click)="exibir()"></div>
-        <div class="content">
-            <div class="left-content">
-                <h2 class="superior-title">Conta corrente</h2>
-                <p class="superior-text">Saldo atual</p>
-                <h1 class="main-info">R$ 190,12</h1>
-                <p class="inferior-text">(Disponível em conta)</p>
-            </div>
-            <div class="right-content">
-                <a class="logo-servico"></a>
-                <p class="desc-servco">Extrato</p>
-            </div>
-        </div>
-    </div>
+    </section>
 </div>
 
 <app-footer></app-footer>

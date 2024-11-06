@@ -1,0 +1,21 @@
+<header>
+    <div class="back" (click)="telaInicial()"></div>
+    <div class="logo"></div>
+    <div class="help"></div>
+</header>
+
+<p-table [value]="extrato">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Descricao</th>
+            <th>Valor</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-transacao>
+        <tr>
+            <td>{{transacao.descricao}}</td>
+            <td>{{transacao.valor}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+

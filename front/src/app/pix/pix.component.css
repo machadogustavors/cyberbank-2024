@@ -1,0 +1,76 @@
+header{
+    width: 100%;
+    padding: 10px;
+    background-color: #9457eb;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.back{
+    width: 200px;
+    height: 40px;
+    background-image: url(../../../public/img/back.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+header .logo{
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background-image: url(../../../public/img/logo.png);
+    background-size: cover;
+}
+
+header .help{
+    width: 45px;
+    height: 45px;
+    background-image: url(../../../public/img/help.png);
+    background-size: cover;
+}
+
+section.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.body form{
+    max-width: 500px;
+    max-height: 800px;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+section.body form input{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 17px;
+    border: 1px solid #c7c7c7;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 0px 10px;
+    outline: 0;
+    color: black;
+}
+
+section.body form button{
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 1s;
+    border: 3px solid #9457eb;
+}

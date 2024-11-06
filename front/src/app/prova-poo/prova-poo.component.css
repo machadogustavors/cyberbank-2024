@@ -1,0 +1,30 @@
+section.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.body h1{
+    padding: 50px;
+    font-size: 32px;
+}
+
+section.body form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.body form span{
+    font-size: 18px;
+}
+
+section.body form input{
+    width: 100%;
+    margin: 20px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 10px;
+}

@@ -1,0 +1,15 @@
+<section class="body">
+    <h1>Simular CDB</h1>
+    <form id="simulacao" (submit)="calcular($event)">
+        <span>Informe o aporte mensal</span>
+        <input class="aporte-mensal" type="number">
+        <span>Informe a data prevista para resgate</span>
+        <input type="date">
+        <input type="submit" value="Calcular">
+    </form>
+
+    <section *ngIf="resultado !== null">
+        <h2>Resultado da Simulação</h2>
+        <p>O valor estimado do rendimento é: <strong>R$ {{ resultado.toFixed(2) }}</strong></p>
+    </section>
+</section>

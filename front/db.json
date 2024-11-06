@@ -1,0 +1,55 @@
+{
+  "correntistas": [
+    {
+      "id": "cf44",
+      "nome": "gustavo machado",
+      "dataNascimento": "2024-10-16",
+      "cpf": "01568522096",
+      "endereco": "Assis Brasil"
+    },
+    {
+      "id": "7155",
+      "nome": "Samuel",
+      "dataNascimento": "2024-10-23",
+      "cpf": "37299620006",
+      "endereco": "Colato"
+    },
+    {
+      "id": "38e4",
+      "nome": "Machado",
+      "dataNascimento": "2024-10-01",
+      "cpf": "55555555555",
+      "endereco": "Sim"
+    }
+  ],
+  "contas": [
+    {
+      "id": "c4a0",
+      "nome": "Machado",
+      "cpf": "55555555555",
+      "senha": "123"
+    }
+  ],
+  "transacoes": [
+    {
+      "numero": 12345,
+      "descricao": "PIX FULANO DE TAL",
+      "data": "20/10/2024",
+      "valor": 1000,
+      "operacao": "D",
+      "id": "c95d"
+    },
+    {
+      "numero": 12346,
+      "descricao": "PGT INTERNET",
+      "data": "20/10/2024",
+      "valor": 100.9,
+      "operacao": "C",
+      "id": "6c91"
+    }
+  ],
+  "perfil": {
+    "name": "Usuario 1",
+    "login": "ts000148989"
+  }
+}
