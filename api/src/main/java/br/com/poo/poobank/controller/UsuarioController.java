@@ -3,6 +3,8 @@ package br.com.poo.poobank.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.poo.poobank.domain.Usuario;
 import br.com.poo.poobank.repository.UsuarioRepository;
-import jakarta.websocket.server.PathParam;
 
 @RestController
 @RequestMapping("/usuario")
@@ -23,9 +24,10 @@ public class UsuarioController {
     private UsuarioRepository repository;
 
     @GetMapping
-    public List<Usuario> buscarTodos(){
+    public ResponseEntity<List<Usuario>> buscarTodos(){
         //return repository.buscarSemSenha();
-        return repository.findAll();
+        List<Usuario> userList = repository.findAll();
+        return ResponseEntity.ok().body(userList);
     }
 
     @GetMapping("/{id}")
@@ -34,17 +36,17 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public String save(@RequestBody Usuario usuario){
-        repository.save(usuario);
+    public ResponseEntity<Usuario> save(@RequestBody Usuario usuario){
+        Usuario novoUsuario = repository.save(usuario);
 
-        return "OK";
+        return ResponseEntity.status(HttpStatus.CREATED).body(novoUsuario);
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable("id") Integer id){
+    public ResponseEntity delete(@PathVariable("id") Integer id){
         repository.deleteById(id);
 
-        return "OK";
+        return ResponseEntity.ok().build();
     }
 
 }
