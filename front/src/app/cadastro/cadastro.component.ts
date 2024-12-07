@@ -1,55 +1,31 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
 import { CorrentistaService } from '../correntista.service';
 import { Correntista } from '../../model/correntista';
-import { FormsModule } from '@angular/forms';  
-import { Conta } from '../../model/conta';
-import { ContaService } from '../conta.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [FormsModule],  
+  imports: [InputTextModule, ButtonModule, FormsModule],
   templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  styleUrl: './cadastro.component.css'
 })
 export class CadastroComponent {
+
   public dadosCadastrais = new Correntista();
-  public dadosConta = new Conta();    
+  public titulo: string = 'Cadastro de Clientes';
+  public cpf = '00000000000';
 
   constructor(
-    private router: Router,
-    private service: CorrentistaService,
-    private serviceConta: ContaService
+    private service: CorrentistaService
   ) {}
 
-  atualizarNomeConta(nome:string){
-    this.dadosConta.nome = nome;
-  }
-
-  atualizarCpfConta(cpf:string){
-    this.dadosConta.cpf = cpf;
-  }
-
-  cadastrar() {
-    this.service.cadastrar(this.dadosCadastrais).subscribe(resposta => {
+  clickSalvar(): void {
+    this.service.cadastrar(this.dadosCadastrais).subscribe ( resposta => {
       alert("Cadastrado com sucesso!");
-      this.router.navigate(['/tela-inicial']);  
-    }, erro => {
-      console.error("Erro ao cadastrar", erro);
-    });
+    })
   }
 
-  cadastrarConta(){
-    this.serviceConta.cadastrarConta(this.dadosConta).subscribe(resposta => {
-      console.log("conta cadastrada");
-    }, erro => {
-      console.error("Erro ao cadastrar", erro);
-    });
-  }
-
-  onSubmit(){
-    this.cadastrar();
-    this.cadastrarConta();
-  }
 }

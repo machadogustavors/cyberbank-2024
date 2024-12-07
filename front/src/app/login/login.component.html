@@ -2,8 +2,8 @@
     <form id="login" (ngSubmit)="logar()">
         <div class="logo"></div>
         <h2>Seja bem vindo ao <span>CyberBank</span>!</h2>
-        <input type="text" placeholder="CPF" [(ngModel)]="cpf" required>
-        <input type="password" placeholder="Senha" [(ngModel)]="senha" required>
+        <input type="text" placeholder="CPF" [(ngModel)]="usuario.login" required>
+        <input type="password" placeholder="Senha" [(ngModel)]="usuario.senha" required>
         <button type="submit">Entrar</button>
         <button (click)="cadastrar()" type="submit">Cadastre-se</button>
     </form>
