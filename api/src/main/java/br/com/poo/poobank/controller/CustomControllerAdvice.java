@@ -10,9 +10,9 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 @ControllerAdvice
 public class CustomControllerAdvice extends ResponseEntityExceptionHandler {
-    // serve pra retornar um erro 400 de bad request e não entregar dados do servidor no TraceBack
+    
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<?> responseException(RuntimeException re, WebRequest wr) {
-        return handleExceptionInternal(re, "Houve um erro no processamento.", new HttpHeaders(), HttpStatus.BAD_REQUEST, wr);
+    public ResponseEntity<?> genericExceptionHandler(RuntimeException re, WebRequest wr) {
+        return handleExceptionInternal(re, "Erro ao processar a requisição.", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR, wr);
     }
 }
