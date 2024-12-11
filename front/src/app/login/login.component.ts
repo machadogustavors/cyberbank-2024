@@ -34,4 +34,9 @@ export class LoginComponent {
        }
     });
   }
+
+  public irParaCadastro() {
+    this.router.navigate(['/cadastro']);
+  }
+  
 }

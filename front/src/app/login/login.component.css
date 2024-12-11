@@ -61,6 +61,7 @@
     cursor: pointer;
     transition: 1s;
     border: 3px solid #9457eb;
+    text-align: center;
 }
 
 .login-screen form button:nth-of-type(2){

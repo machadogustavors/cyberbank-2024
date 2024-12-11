@@ -17,7 +17,7 @@ public class Transacao {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "correntista_id")
+    @JoinColumn(name = "id_correntista")
     private Correntista correntista;
 
     private String numero;

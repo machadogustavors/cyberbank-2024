@@ -4,6 +4,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CorrentistaService } from '../correntista.service';
 import { Correntista } from '../../model/correntista';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Usuario } from '../../model/usuario';
 
 @Component({
   selector: 'app-cadastro',
@@ -14,18 +16,26 @@ import { FormsModule } from '@angular/forms';
 })
 export class CadastroComponent {
 
-  public dadosCadastrais = new Correntista();
+  public usuario = new Usuario();
   public titulo: string = 'Cadastro de Clientes';
-  public cpf = '00000000000';
+  public nome = '';
+  public login = '';
+  public senha = '';
 
   constructor(
+    private router: Router,
     private service: CorrentistaService
   ) {}
 
   clickSalvar(): void {
-    this.service.cadastrar(this.dadosCadastrais).subscribe ( resposta => {
+    this.service.cadastrar(this.usuario).subscribe ( resposta => {
       alert("Cadastrado com sucesso!");
+      this.router.navigate(['/']); 
     })
+  }
+
+  public voltar() {
+    this.router.navigate(['/']); 
   }
 
 }

@@ -1,10 +1,42 @@
-<section class="login-screen">
-    <form id="login" (ngSubmit)="logar()">
-        <div class="logo"></div>
-        <h2>Seja bem vindo ao <span>CyberBank</span>!</h2>
-        <input type="text" placeholder="CPF" [(ngModel)]="usuario.login" required>
-        <input type="password" placeholder="Senha" [(ngModel)]="usuario.senha" required>
-        <button type="submit">Entrar</button>
-        <button (click)="cadastrar()" type="submit">Cadastre-se</button>
+<div class="login-screen">
+    <form>
+      <div class="logo"></div>
+      <h2>Informe suas <span>credenciais</span> de acesso</h2>
+  
+      <!-- Campo de Login -->
+      <input 
+        pInputText 
+        type="text" 
+        name="login"
+        placeholder="Login" 
+        [(ngModel)]="usuario.login" 
+      />
+  
+      <!-- Campo de Senha -->
+      <input 
+        pInputText 
+        type="password" 
+        name="senha"
+        placeholder="Senha" 
+        [(ngModel)]="usuario.senha" 
+      />
+  
+      <!-- Botão de Login -->
+      <button 
+        pButton 
+        type="button" 
+        (click)="fazerLogin()"
+      >
+        Entrar
+      </button>
+
+      <button 
+        pButton 
+        type="button" 
+        (click)="irParaCadastro()"
+        >
+        Cadastre-se
+        </button>
     </form>
-  </section><!--login-screen-->
+  </div>
+  

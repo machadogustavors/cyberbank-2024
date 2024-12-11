@@ -1,63 +1,68 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-}
-
-form {
-    background-color: white;
-    padding: 20px;
-    /* border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+.cadastro-screen {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../public/img/bg-login.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cadastro-screen form {
     max-width: 500px;
-    margin: auto;
-    /* border: 2px solid #c7c7c7; */
-}
-
-h2 {
-    color: #9457eb;
-    text-align: center;
-}
-
-label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    color: #9457eb;
-}
-
-input[type="text"], input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #c7c7c7;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-input[type="text"]:focus, input[type="date"]:focus {
-    border-color: #00b0fc;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 176, 252, 0.5);
-}
-
-input[type="submit"] {
-    background-color: #9457eb;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cadastro-screen form h2 {
     color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .cadastro-screen form h2 span {
+    font-weight: 700;
+    color: #9457eb;
+  }
+  
+  .cadastro-screen form input {
     width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    padding: 0 15px;
     font-size: 16px;
-}
-
-input[type="submit"]:hover {
-    background-color: #00b0fc;
-}
-
-input[type="submit"]:active {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+  }
+  
+  .cadastro-screen form input:focus {
+    border-color: #9457eb;
+    box-shadow: 0 0 5px #9457eb;
+  }
+  
+  .cadastro-screen form button {
+    width: 150px;
+    height: 45px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
     background-color: #9457eb;
-    transform: scale(0.98);
-}
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cadastro-screen form button:hover {
+    background-color: #7a3ad0;
+  }
+  
