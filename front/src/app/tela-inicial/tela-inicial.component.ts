@@ -13,7 +13,8 @@ import { CorrentistaService } from '../correntista.service';
   standalone: true,
   imports: [HeaderComponent, FooterComponent, CommonModule, PixComponent],
   templateUrl: './tela-inicial.component.html',
-  styleUrl: './tela-inicial.component.css'
+  styleUrl: './tela-inicial.component.css',
+  host: { 'class': 'tela-inicial-container' }
 })
 export class TelaInicialComponent implements OnInit{
   showText = true;

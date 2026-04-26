@@ -1,31 +1,61 @@
 header{
     width: 100%;
-    padding: 10px;
-    background-color: #9457eb;
+    padding: 16px 20px;
+    background-color: #ffffff;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .menu{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-image: url(../../../public/img/menu.png);
     background-size: cover;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: #f8f9fa;
+}
+
+header .menu:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
 }
 
 header .logo{
-    margin: 0 auto;
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     background-image: url(../../../public/img/logo.png);
     background-size: cover;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+header .logo:hover {
+    transform: scale(1.05);
 }
 
 header .help{
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background-image: url(../../../public/img/help.png);
     background-size: cover;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: #f8f9fa;
+}
+
+header .help:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
 }

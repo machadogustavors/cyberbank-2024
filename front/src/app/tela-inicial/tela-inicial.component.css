@@ -1,34 +1,52 @@
+.tela-inicial-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .info-cliente{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    margin: 20px auto;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 2px solid #007bff;
 }
 
 .info-cliente .cont-esquerda, .info-cliente .cont-direita{
-    padding: 15px;
+    padding: 16px;
+    flex: 1;
 }
 
 .info-cliente .cont-esquerda h2, .info-cliente .cont-direita h2{
-    color: #00b0fc;
-    font-size: 17px;
+    color: #007bff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 .info-cliente .cont-esquerda p, .info-cliente .cont-direita p{
-    color: #aaa;
-    font-size: 13px;
+    color: #666666;
+    font-size: 14px;
 }
 
 .info-cliente .cont-esquerda{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    text-align: left;
 }
 
 .info-cliente .cont-direita{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    text-align: right;
 }
 
 .servicos{
@@ -36,18 +54,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
+    width: 100%;
+    flex: 1;
 }
 
 .box-container {
     position: relative;
-    width: 90%;
-    padding: 10px;
-    border: 2px solid #9457eb;
-    border-radius: 15px;
-    margin: 15px;
-    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    height: 180px;
+    border: 2px solid #007bff;
+    border-radius: 12px;
+    margin: 16px;
+    background-color: #ffffff;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.box-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.15);
 }
 
 .curtain {
@@ -56,41 +85,48 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
     color: white;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     z-index: 2;
-    transition: width 0.5s ease;
-    border-right: 15px solid #9457eb;
+    transition: all 0.3s ease;
 }
 
 .curtain p{
     margin: 0;
     padding: 0;
-    color: black;
+    color: white;
     z-index: 3;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
 }
 
 .reveal .curtain {
-    width: 10px;
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .reveal .content {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .content {
-    padding: 5px;
-    padding-left: 20px;
+    padding: 16px;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
 }
 
 .content .left-content{
@@ -101,45 +137,72 @@
 }
 
 .content .left-content h2{
-    font-size: 12px;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 4px;
 }
 
-.content .right-content .logo-servico{  
+.content .left-content p{
+    font-size: 12px;
+    color: #666666;
+}
+
+.content .right-content .logo-servico{
     background-image: url(../../../public/img/bank-statement.png);
     background-size: contain;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    padding: 8px;
 }
 
-.content .right-content .logo-servico-cartao{  
+.content .right-content .logo-servico-cartao{
     background-image: url(../../../public/img/credit-card.png);
     background-size: contain;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    padding: 8px;
 }
 
 section.actions{
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 section.actions .default-action{
-    width: inherit;
-    padding: 10px;
-    border: 1px solid #9457eb;
-    border-radius: 100px;
+    width: 100%;
+    max-width: 300px;
+    padding: 16px;
+    border: 2px solid #007bff;
+    border-radius: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+section.actions .default-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 123, 255, 0.2);
 }
 
 section.actions .pix-action p{
-    color: black;
-    font-size: 17px;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
 }
 
 section.actions .pix-action div.pix-image{
@@ -147,4 +210,7 @@ section.actions .pix-action div.pix-image{
     background-size: cover;
     width: 50px;
     height: 50px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    padding: 8px;
 }

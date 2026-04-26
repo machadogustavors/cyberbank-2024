@@ -1,46 +1,82 @@
 <div class="cadastro-screen">
     <form>
       <h2>Cadastro de <span>Usuário</span></h2>
-  
+
       <!-- Campo Nome -->
-      <input 
-        pInputText 
-        type="text" 
+      <input
+        pInputText
+        type="text"
         name="nome"
-        placeholder="Nome" 
-        [(ngModel)]="usuario.nome" 
-      />
-  
-      <!-- Campo CPF -->
-      <input 
-        pInputText 
-        type="text" 
-        name="cpf"
-        placeholder="Login"
-        [(ngModel)]="usuario.login" 
+        placeholder="Nome Completo"
+        [(ngModel)]="usuario.nome"
       />
 
-      <!-- Campo CPF -->
-      <input 
-        pInputText 
-        type="password" 
-        name="senha"
-        placeholder="Senha" 
-        [(ngModel)]="usuario.senha" 
+      <!-- Campo Email -->
+      <input
+        pInputText
+        type="email"
+        name="email"
+        placeholder="Email"
+        [(ngModel)]="usuario.email"
       />
-  
+
+      <!-- Campo Telefone -->
+      <input
+        pInputText
+        type="tel"
+        name="telefone"
+        placeholder="Telefone"
+        [(ngModel)]="usuario.telefone"
+      />
+
+      <!-- Campo Endereço -->
+      <input
+        pInputText
+        type="text"
+        name="endereco"
+        placeholder="Endereço"
+        [(ngModel)]="usuario.endereco"
+      />
+
+      <!-- Campo Data de Nascimento -->
+      <input
+        pInputText
+        type="date"
+        name="dataNascimento"
+        placeholder="Data de Nascimento"
+        [(ngModel)]="usuario.dataNascimento"
+      />
+
+      <!-- Campo Login -->
+      <input
+        pInputText
+        type="text"
+        name="login"
+        placeholder="Login"
+        [(ngModel)]="usuario.login"
+      />
+
+      <!-- Campo Senha -->
+      <input
+        pInputText
+        type="password"
+        name="senha"
+        placeholder="Senha"
+        [(ngModel)]="usuario.senha"
+      />
+
       <!-- Botão de Cadastrar -->
-      <button 
-        pButton 
-        type="button" 
+      <button
+        pButton
+        type="button"
         (click)="clickSalvar()"
       >
         Cadastrar
       </button>
 
-      <button 
-        pButton 
-        type="button" 
+      <button
+        pButton
+        type="button"
         (click)="voltar()"
         >
         Voltar
